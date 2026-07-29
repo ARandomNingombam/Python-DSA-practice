@@ -4,4 +4,4 @@ ar = list(map(int,input("Enter the numbers: ").split()))
 
 ar.sort()
 
-print(f"The largest number is ",ar.pop())
+print(f"The Smallest Number is ",ar[0])
