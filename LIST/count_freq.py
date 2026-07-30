@@ -1,14 +1,17 @@
 
 ar = list(map(int,input("Enter the numbers: ").split()))
 
-ele_freq=[]
-ele=int([])
+freq = []
 
 for i in ar:
-    if i not in ele:
-        ele.append([i,0])
-    for a,b in enumerate(ele):
-        if b == i: 
-            ele[a,1]+=1
+    f = False
+    for item in freq:
+        if item[0] == i:
+            item[1] += 1
+            f = True
+            break
 
-print(ele)
+    if not f:
+        freq.append([i,1])
+
+print(f"The frequency of the elements are: ", freq)
